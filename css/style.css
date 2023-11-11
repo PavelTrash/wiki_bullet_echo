@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto+Condensed&display=swap');
 body::-webkit-scrollbar {
   width: 0;
 }
@@ -10,13 +11,13 @@ html {
 body {
   margin: 0;
   padding: 0 3%;
-  font-family: "Mulish", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.2em;
   height: 100vh;
-  background: linear-gradient(180deg, #172459 0%, #274E9B 100%);
+  background: linear-gradient(180deg, #274E9B 0%, #274E9B 100%);
   color: #ffffff;
 }
 
@@ -116,11 +117,13 @@ ul {
   .about {
     margin-bottom: 200px;
     height: 600px;
+    color: #15377d;
   }
 
   .list_characters{
     display: flex;
     flex-direction: row;
+    color: #15377d;
   }
   
   .card{
