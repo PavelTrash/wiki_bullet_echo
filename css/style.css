@@ -4,6 +4,78 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
+@media(min-width:280px )and (max-width:700px){
+  .main-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: #274E9B;
+    border:1px solid #fff;
+    padding: 20px 10px ; 
+    transform: translateX(100%);
+  }
+
+  .main-list{
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .burger-menu{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .burger-menu::before,
+    .burger-menu::after {
+        content: ''; /* пустой контент */
+        background: #fff; /*цвет бургера*/
+        position: absolute; /* позиция для общего блока*/
+        width: 100%; /* ширина*/
+        height: 2px; /* толщина полосок бургера */
+    }
+
+    .burger-menu::before {
+        top: 0; /* расположение верхней линии бургера */
+    }
+
+    .burger-menu span { /*средняя линия в виде span*/
+        background: #fff;
+        position: absolute; 
+        width: 100%;
+        top: 9px;
+        height: 2px; 
+    }
+    .burger-menu::after {
+        bottom: 0; /* расположение нижней линии бургера */
+    }
+
+    .burger-menu.active {
+      transform: translateX(-40vw);
+      z-index:3;
+    }
+
+    .burger-menu.active::before {
+      transform: rotate(45deg);
+      top:9px;
+    }
+    .burger-menu.active::after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+
+    .burger-menu.active span {
+        transform: scale(0);
+    }
+
+    .main-nav.active {
+      transform: translate(0);
+    }
+}
+
+
 html {
   scroll-behavior: smooth;
 }
